@@ -26,3 +26,11 @@ This is an event management system that allows users to register and log in. Use
    - Manage Events
    - Manage Orders
    - Logout
+  
+## Getting Started
+
+1. **Supabase**
+   - Register for an account at: [Supabase](https://supabase.com/)
+   - Obtain your API key.
+   - Replace the API key in the code with your obtained key.
+
