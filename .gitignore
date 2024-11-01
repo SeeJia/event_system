@@ -1,0 +1,15 @@
+# Ignore environment variables
+.env
+
+# Ignore Composer dependencies
+/vendor/
+
+# Ignore node_modules if using Node.js
+/node_modules/
+
+# Ignore logs
+*.log
+
+# Ignore OS-specific files
+.DS_Store   # macOS
+Thumbs.db   # Windows

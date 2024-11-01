@@ -1,0 +1,16 @@
+{
+    "name": "admin/event_system",
+    "description": "A simple event system",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Admin\\EventSystem\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "supabase/supabase-php": "^0.0.1",
+        "monolog/monolog": "^2.0"
+    }
+}
