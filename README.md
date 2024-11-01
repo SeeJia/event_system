@@ -34,3 +34,15 @@ This is an event management system that allows users to register and log in. Use
    - Obtain your API key.
    - Replace the API key in the code with your obtained key.
 
+2. **Create Tables in Supabase Database**
+   - Create the following tables:
+     - **admin**
+     - **event**
+     - **user**
+     - **user_checkout**
+     - **user_event_cart**
+
+3. **Create Storage in Supabase**
+   - Create the following storage:
+     - **event_image**
+     - **payment_receipt**
