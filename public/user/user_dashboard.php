@@ -126,7 +126,7 @@ $users = json_decode($response_user, true);
               <div class="col-md-3 mb-3"> <!-- 每个事件占4列，确保这里的col在循环内部 -->
                 <div class="card">
                   <input type="hidden" name="id" value="<?php echo $event['event_id']; ?>">
-                  <img class="img-fluid" alt="Event Image" src="<?php echo $event['event_image']; ?>">
+                  <img style="height:200px;" class="img-fluid" alt="Event Image" src="<?php echo $event['event_image']; ?>">
                   <div class="card-body">
                     <h5><?php echo $event['event_name']; ?></h5>
                     <p><?php echo $event['event_description']; ?></p>
