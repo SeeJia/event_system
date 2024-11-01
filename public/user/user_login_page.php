@@ -32,6 +32,9 @@
                 <div class="text-center mt-2">
                     <p>Don't have an account? <a class="link-offset-2 link-underline link-underline-opacity-0" href="user_register_page.php">Register</a></p>
                 </div>
+                <div class="text-center mt-2">
+                    <p>Email: user1@mail.com Password: User1@API</p>
+                </div>
                 <?php if (isset($_SESSION['message']) && $_SESSION['message'] !== ''): ?>
                     <div class="text-center mt-2 alert alert-danger" role="alert">
                         <?php echo $_SESSION['message']; unset($_SESSION['message']); ?>
