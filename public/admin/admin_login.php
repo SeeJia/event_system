@@ -2,7 +2,7 @@
 
 require '../../vendor/autoload.php';
 
-$apiUrl = 'https://rrbelxfhgynojbawqdkl.supabase.co/rest/v1/admin?select=*';
+$apiUrl = 'https://drudqpdgdmnjjauhbbts.supabase.co/rest/v1/admin?select=*';
 $apiKey = $_ENV['SUPABASE_API_KEY'];
 $bearerToken = $_ENV['SUPABASE_BEARER_TOKEN'];
 

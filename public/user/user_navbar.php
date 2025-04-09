@@ -2,7 +2,7 @@
 
 require '../../vendor/autoload.php'; 
 
-$apiUserUrl = 'https://rrbelxfhgynojbawqdkl.supabase.co/rest/v1/user?select=*&user_email=eq.'; 
+$apiUserUrl = 'https://drudqpdgdmnjjauhbbts.supabase.co/rest/v1/user?select=*&user_email=eq.'; 
 
 $chUser = curl_init();
 

@@ -2,7 +2,7 @@
 
 require '../../vendor/autoload.php'; 
 
-$apiUrl = 'https://rrbelxfhgynojbawqdkl.supabase.co/rest/v1/event'; 
+$apiUrl = 'https://drudqpdgdmnjjauhbbts.supabase.co/rest/v1/event'; 
 $apiKey = $_ENV['SUPABASE_API_KEY'];
 $bearerToken = $_ENV['SUPABASE_BEARER_TOKEN'];
 
@@ -11,7 +11,7 @@ $bearerSecretToken = $_ENV['SUPABASE_BEARER_SECRET_TOKEN'];
 
 $event_id = $_GET['event_id'];
 
-$select_event_data_url = 'https://rrbelxfhgynojbawqdkl.supabase.co/rest/v1/event?event_id=eq.'. $event_id;
+$select_event_data_url = 'https://drudqpdgdmnjjauhbbts.supabase.co/rest/v1/event?event_id=eq.'. $event_id;
 
 $ch2 = curl_init();
 

@@ -4,7 +4,7 @@ require '../../vendor/autoload.php';
 
 session_start();
 
-$apiUrl = 'https://rrbelxfhgynojbawqdkl.supabase.co/rest/v1/event?select=*'; 
+$apiUrl = 'https://drudqpdgdmnjjauhbbts.supabase.co/rest/v1/event?select=*'; 
 $apiKey = $_ENV['SUPABASE_API_KEY'];
 $bearerToken = $_ENV['SUPABASE_BEARER_TOKEN'];
 
@@ -33,11 +33,11 @@ $events = json_decode($response, true);
 $_SESSION['email'];
 
 $search = isset($_GET['search']) ? trim($_GET['search']) : '';
-$apiSearchUrl = 'https://rrbelxfhgynojbawqdkl.supabase.co/rest/v1/event?select=*&event_name=eq.'; 
+$apiSearchUrl = 'https://drudqpdgdmnjjauhbbts.supabase.co/rest/v1/event?event_name=ilike.*' . urlencode($search) . '*'; 
 
 $search_curl = curl_init();
 
-curl_setopt($search_curl, CURLOPT_URL, $apiSearchUrl . $search);
+curl_setopt($search_curl, CURLOPT_URL, $apiSearchUrl);
 curl_setopt($search_curl, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($search_curl, CURLOPT_HTTPHEADER, [
     'apikey: ' . $apiKey,
@@ -46,7 +46,6 @@ curl_setopt($search_curl, CURLOPT_HTTPHEADER, [
 ]);
 
 $response_search = curl_exec($search_curl);
-
 curl_close($search_curl);
 
 $search_results = json_decode($response_search, true);

@@ -1,10 +1,8 @@
 <?php
 
 require '../../vendor/autoload.php'; 
-
 session_start();
 
-$apiSearchUrl = 'https://rrbelxfhgynojbawqdkl.supabase.co/rest/v1/event?select=*&event_name=eq.'; 
 $apiKey = $_ENV['SUPABASE_API_KEY'];
 $bearerToken = $_ENV['SUPABASE_BEARER_TOKEN'];
 
@@ -12,9 +10,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $search_event = $_POST['search'];
 
+    // 用 ilike 支持模糊查询 + URL encode
+    $apiSearchUrl = 'https://drudqpdgdmnjjauhbbts.supabase.co/rest/v1/event?event_name=ilike.*' . urlencode($search_event) . '*';
+
     $search_curl = curl_init();
 
-    curl_setopt($search_curl, CURLOPT_URL, $apiSearchUrl . $search_event);
+    curl_setopt($search_curl, CURLOPT_URL, $apiSearchUrl);
     curl_setopt($search_curl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($search_curl, CURLOPT_HTTPHEADER, [
         'apikey: ' . $apiKey,
@@ -24,11 +25,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $response_search = curl_exec($search_curl);
 
+    if (curl_errno($search_curl)) {
+        // echo 'Curl error: ' . curl_error($search_curl);
+    }
+
     curl_close($search_curl);
 
     $search_results = json_decode($response_search, true);
 
+    // echo "<h3>Raw JSON Response</h3>";
+    // echo "<pre>$response_search</pre>";
+
+    // echo "<h3>Parsed Results</h3>";
+    // echo "<pre>";
+    // print_r($search_results);
+    // echo "</pre>";
+
 }
+
+// echo "<pre>";
+// print_r($search_results);
+// echo "</pre>";
+
 
 ?>
 
@@ -65,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <?php endforeach; ?>
     <?php else: ?>
         <div class="text-center d-flex justify-content-center align-items-center" style="height: 200px;">
-            <p>Empty Order</p>
+            <p>Empty Search</p>
         </div>
     <?php endif; ?>
 </div>

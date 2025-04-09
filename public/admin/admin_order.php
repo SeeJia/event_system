@@ -4,10 +4,9 @@ require '../../vendor/autoload.php';
 
 session_start();
 
-$apiUrl = 'https://rrbelxfhgynojbawqdkl.supabase.co/rest/v1/user_checkout?select=*'; 
+$apiUrl = 'https://drudqpdgdmnjjauhbbts.supabase.co/rest/v1/user_checkout?select=*'; 
 $apiKey = $_ENV['SUPABASE_API_KEY'];
 $bearerToken = $_ENV['SUPABASE_BEARER_TOKEN'];
-
 
 $ch = curl_init();
 

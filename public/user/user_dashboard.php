@@ -4,7 +4,7 @@ require '../../vendor/autoload.php';
 
 session_start();
 
-$apiUrl = 'https://rrbelxfhgynojbawqdkl.supabase.co/rest/v1/event?limit=12'; 
+$apiUrl = 'https://drudqpdgdmnjjauhbbts.supabase.co/rest/v1/event?limit=12'; 
 $apiKey = $_ENV['SUPABASE_API_KEY'];
 $bearerToken = $_ENV['SUPABASE_BEARER_TOKEN'];
 

@@ -14,7 +14,7 @@ if ($payment_status == 'Pending'){
     $payment_status = 'Pending';
 }
 
-$apiUrl = 'https://rrbelxfhgynojbawqdkl.supabase.co/rest/v1/user_checkout?select=*'; 
+$apiUrl = 'https://drudqpdgdmnjjauhbbts.supabase.co/rest/v1/user_checkout?select=*'; 
 $apiKey = $_ENV['SUPABASE_API_KEY'];
 $bearerToken = $_ENV['SUPABASE_BEARER_TOKEN'];
 

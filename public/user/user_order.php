@@ -6,7 +6,7 @@ session_start();
 
 $user_id = $_GET['user_id'];
 
-$user_order_URL = 'https://rrbelxfhgynojbawqdkl.supabase.co/rest/v1/user_checkout?select=*&user_id=eq.'; 
+$user_order_URL = 'https://drudqpdgdmnjjauhbbts.supabase.co/rest/v1/user_checkout?select=*&user_id=eq.'; 
 $apiKey = $_ENV['SUPABASE_API_KEY'];
 $bearerToken = $_ENV['SUPABASE_BEARER_TOKEN'];
 
@@ -32,7 +32,7 @@ foreach ($user_orders as $user_order) {
 $event_results = [];
 foreach ($event_ids as $event_id) {
 
-    $apiEventUrl = 'https://rrbelxfhgynojbawqdkl.supabase.co/rest/v1/event?select=*';
+    $apiEventUrl = 'https://drudqpdgdmnjjauhbbts.supabase.co/rest/v1/event?select=*';
     $ch_event = curl_init();
     curl_setopt($ch_event, CURLOPT_URL, $apiEventUrl . '&event_id=eq.' . $event_id);
     curl_setopt($ch_event, CURLOPT_RETURNTRANSFER, true);

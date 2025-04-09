@@ -7,9 +7,9 @@ if (!isset($_SESSION['email'])) {
     exit();
 }
 
-$apiUserUrl = 'https://rrbelxfhgynojbawqdkl.supabase.co/rest/v1/user?select=*';
-$apiEventUrl = 'https://rrbelxfhgynojbawqdkl.supabase.co/rest/v1/event?select=*';  
-$apiOrderUrl = 'https://rrbelxfhgynojbawqdkl.supabase.co/rest/v1/user_checkout?select=*'; 
+$apiUserUrl = 'https://drudqpdgdmnjjauhbbts.supabase.co/rest/v1/user?select=*';
+$apiEventUrl = 'https://drudqpdgdmnjjauhbbts.supabase.co/rest/v1/event?select=*';  
+$apiOrderUrl = 'https://drudqpdgdmnjjauhbbts.supabase.co/rest/v1/user_checkout?select=*'; 
 $apiKey = $_ENV['SUPABASE_API_KEY'];
 $bearerToken = $_ENV['SUPABASE_BEARER_TOKEN'];
 

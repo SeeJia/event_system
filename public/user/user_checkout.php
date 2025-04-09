@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['file']) && $_FILES['f
     date_default_timezone_set('Asia/Kuala_Lumpur'); // 设置为马来西亚时区
     $currentTime = date('Y-m-d H:i:s'); // 格式为 'YYYY-MM-DD HH:MM:SS'
 
-    $apiPaymentStorage = 'https://rrbelxfhgynojbawqdkl.supabase.co/storage/v1/object/payment_receipt/';
+    $apiPaymentStorage = 'https://drudqpdgdmnjjauhbbts.supabase.co/storage/v1/object/payment-receipt/';
     $apiSecretKey = $_ENV['SUPABASE_API_SECRET_KEY'];
     $bearerSecretToken = $_ENV['SUPABASE_BEARER_SECRET_TOKEN'];
     
@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['file']) && $_FILES['f
     
     curl_close($payment_receipt_curl);
 
-    $apiEventUrl = 'https://rrbelxfhgynojbawqdkl.supabase.co/rest/v1/user_event_cart';
+    $apiEventUrl = 'https://drudqpdgdmnjjauhbbts.supabase.co/rest/v1/user_event_cart';
     $apiKey = $_ENV['SUPABASE_API_KEY'];
     $bearerToken = $_ENV['SUPABASE_BEARER_TOKEN'];
 
@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['file']) && $_FILES['f
         echo 'Error: ' . curl_error($ch);
 
     } else {
-        $apiCheckoutUrl = 'https://rrbelxfhgynojbawqdkl.supabase.co/rest/v1/user_checkout';
+        $apiCheckoutUrl = 'https://drudqpdgdmnjjauhbbts.supabase.co/rest/v1/user_checkout';
 
     $user_checkout_data = json_encode([
         "user_id" => $user_id,

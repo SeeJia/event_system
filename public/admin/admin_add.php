@@ -4,11 +4,11 @@ ob_start(); // 启动输出缓冲
 
 require '../../vendor/autoload.php'; 
 
-$apiUrl = 'https://rrbelxfhgynojbawqdkl.supabase.co/rest/v1/event';
+$apiUrl = 'https://drudqpdgdmnjjauhbbts.supabase.co/rest/v1/event';
 $apiKey = $_ENV['SUPABASE_API_KEY'];
 $bearerToken = $_ENV['SUPABASE_BEARER_TOKEN'];
 
-$imageUploadUrl = 'https://rrbelxfhgynojbawqdkl.supabase.co/storage/v1/object/event_image/'; 
+$imageUploadUrl = 'https://drudqpdgdmnjjauhbbts.supabase.co/storage/v1/object/event-image/'; 
 $apiScretKey = $_ENV['SUPABASE_API_SECRET_KEY'];
 $bearerScretToken = $_ENV['SUPABASE_BEARER_SECRET_TOKEN'];
 

@@ -7,8 +7,8 @@ session_start();
 $user_id = $_GET['user_id'];
 $event_id = $_GET['event_id'];
 
-$apiUrl = 'https://rrbelxfhgynojbawqdkl.supabase.co/rest/v1/user_event_cart?select=*';
-$apiEventUrl = 'https://rrbelxfhgynojbawqdkl.supabase.co/rest/v1/event?select=*';
+$apiUrl = 'https://drudqpdgdmnjjauhbbts.supabase.co/rest/v1/user_event_cart?select=*';
+$apiEventUrl = 'https://drudqpdgdmnjjauhbbts.supabase.co/rest/v1/event?select=*';
 $apiKey = $_ENV['SUPABASE_API_KEY'];
 $bearerToken = $_ENV['SUPABASE_BEARER_TOKEN'];
 
